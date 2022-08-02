@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A427EC02-0639-4C5C-8A8F-D27C221E0C55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Luminescence.Engine</RootNamespace>
+    <AssemblyName>Luminescence.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Checkings\Diapason\IDiapasonChecking.cs" />
+    <Compile Include="Code\Checkings\Diapason\MinimumInterval.cs" />
+    <Compile Include="Code\PauseToken.cs" />
+    <Compile Include="Code\PauseTokenSource.cs" />
+    <Compile Include="Managers\Saver\CustomFileNameSaverManager.cs" />
+    <Compile Include="Managers\Saver\ICustomFileNameSaverManager.cs" />
+    <Compile Include="Models\Commands.cs" />
+    <Compile Include="Controllers\DimensionControllers\DimensionController.cs" />
+    <Compile Include="Controllers\DimensionControllers\DataDimension.cs" />
+    <Compile Include="Controllers\DimensionControllers\IDataDimension.cs" />
+    <Compile Include="Controllers\DimensionControllers\IDimensionController.cs" />
+    <Compile Include="Controllers\StepMotorControllers\StepMotorController.cs" />
+    <Compile Include="Controllers\StepMotorControllers\IStepMotorController.cs" />
+    <Compile Include="Controllers\UsbConntrollers\IUsbHidController.cs" />
+    <Compile Include="Controllers\UsbConntrollers\UsbHidController.cs" />
+    <Compile Include="Managers\Device\DeviceManager.cs" />
+    <Compile Include="Managers\Device\IDeviceManager.cs" />
+    <Compile Include="Managers\Dimensions\DimensionManager.cs" />
+    <Compile Include="Devices\IDevice.cs" />
+    <Compile Include="Devices\Device.cs" />
+    <Compile Include="Managers\Dimensions\IDimensionManager.cs" />
+    <Compile Include="Managers\Saver\IResultSaverManager.cs" />
+    <Compile Include="Models\Results.cs" />
+    <Compile Include="Managers\Saver\ResultSaverManager.cs" />
+    <Compile Include="Managers\Settings\ConnectionSettingsManager.cs" />
+    <Compile Include="Managers\Settings\DimensionSettingsManager.cs" />
+    <Compile Include="Managers\Settings\IConnectionSettingsManager.cs" />
+    <Compile Include="Managers\Settings\IDimensionSettingsManager.cs" />
+    <Compile Include="Managers\Settings\IStepMotorSettingsManager.cs" />
+    <Compile Include="Managers\Settings\StepMotorSettingsManager.cs" />
+    <Compile Include="Managers\StepMotors\IStepMotorManager.cs" />
+    <Compile Include="Managers\StepMotors\StepMotorManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ResultSavers\ILastFileNameSaverRepository.cs" />
+    <Compile Include="Repositories\ResultSavers\IResultSaverRepository.cs" />
+    <Compile Include="Repositories\ResultSavers\LastFileNameSaverRepository.cs" />
+    <Compile Include="Repositories\ResultSavers\ResultSaverRepository.cs" />
+    <Compile Include="Repositories\Settings\ConnectionSettings\ConnectionRepository.cs" />
+    <Compile Include="Repositories\Settings\ConnectionSettings\IConnectionRepository.cs" />
+    <Compile Include="Repositories\Settings\DimensionSettings\DimensionRepository.cs" />
+    <Compile Include="Repositories\Settings\DimensionSettings\IDimensionRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\Settings\StepMotorSettings\IStepMotorRepository.cs" />
+    <Compile Include="Repositories\Settings\StepMotorSettings\StepMotorRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

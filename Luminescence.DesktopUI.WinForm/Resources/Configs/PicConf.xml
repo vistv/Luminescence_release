@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PIC18F4550>
+  <connection>
+    <usb>
+      <vid>04D8</vid>
+      <pid>003F</pid>
+      <connectionTimeRefreshing>100</connectionTimeRefreshing>
+    </usb>
+  </connection>
+  <settings>
+    <dimension>
+      <delaySec>1</delaySec>
+      <beginWavelength>119.9642</beginWavelength>
+      <endWavelength>200</endWavelength>
+      <stepNms>6</stepNms>
+    </dimension>
+    <stepMotor>
+      <countStepsPer1Nm>346.6331</countStepsPer1Nm>
+      <delayMsPer1Step>3</delayMsPer1Step>
+      <currentWavelength>220.9818</currentWavelength>
+    </stepMotor>
+    <stepMotor>
+      <countStepsPer1Nm>320</countStepsPer1Nm>
+      <delayMsPer1Step>3</delayMsPer1Step>
+      <currentWavelength>131.9969</currentWavelength>
+    </stepMotor>
+  </settings>
+</PIC18F4550>
